@@ -4,13 +4,25 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2024/07/30/hello-world/"/>
-    <url>/2024/07/30/hello-world/</url>
+    <title>介绍</title>
+    <link href="/2024/07/31/introduce/"/>
+    <url>/2024/07/31/introduce/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Hello 大家好，我是十八加十八。</p><p>欢迎来到我的博客！本博客网站建立于 2024 年 7 月 31 日，耗时一天制作完成，主要分享一些生活、工作、学习中的感悟和经验。</p><h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>特别感谢以下作者的文章或教程<br><a href="https://www.fomal.cc/">Fomalhaut🥝</a><br><a href="https://www.bilibili.com/video/BV1Ju4m1c7WR/">阿谦 wu</a><br><a href="http://t.csdnimg.cn/8ZnZu">WSKH0929</a></p><p>感谢 Hexo 和 Fluid 主题的作者们，让我有机会快速搭建一个博客网站。</p><style>  /* 设置整个页面的字体 */  html, body, .markdown-body {    /* font-family: KaiTi,"Microsoft YaHei",Georgia, sans, serif; */    font-size: 16px;  }  /* 只设置 markdown 字体 */  .markdown-body {    font-family: KaiTi,"Microsoft YaHei",Georgia, sans, serif;    font-size: 18px;  }</style>]]></content>
     
     
+    <categories>
+      
+      <category>文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>原创 [Hexo, Fluid]</tag>
+      
+    </tags>
     
   </entry>
   
