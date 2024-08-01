@@ -8,7 +8,7 @@
     <link href="/2024/07/31/introduce/"/>
     <url>/2024/07/31/introduce/</url>
     
-    <content type="html"><![CDATA[<p>Hello 大家好，我是十八加十八。</p><p>欢迎来到我的博客！本博客网站建立于 2024 年 7 月 31 日，耗时一天制作完成，主要分享一些生活、工作、学习中的感悟和经验。</p><h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>特别感谢以下作者的文章或教程<br><a href="https://www.fomal.cc/">Fomalhaut🥝</a><br><a href="https://www.bilibili.com/video/BV1Ju4m1c7WR/">阿谦 wu</a><br><a href="http://t.csdnimg.cn/8ZnZu">WSKH0929</a></p><p>感谢 Hexo 和 Fluid 主题的作者们，让我有机会快速搭建一个博客网站。</p><style>  /* 设置整个页面的字体 */  html, body, .markdown-body {    /* font-family: KaiTi,"Microsoft YaHei",Georgia, sans, serif; */    font-size: 16px;  }  /* 只设置 markdown 字体 */  .markdown-body {    font-family: KaiTi,"Microsoft YaHei",Georgia, sans, serif;    font-size: 18px;  }</style>]]></content>
+    <content type="html"><![CDATA[<p>Hello 大家好，我是十八加十八。</p><p>欢迎来到我的博客！本博客网站建立于 2024 年 7 月 31 日，耗时一天制作完成，主要分享一些生活、工作、学习中的感悟和经验。</p><h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>特别感谢以下作者的文章或教程<br><a href="https://www.fomal.cc/">Fomalhaut🥝</a><br><a href="https://www.bilibili.com/video/BV1Ju4m1c7WR/">阿谦 wu</a><br><a href="http://t.csdnimg.cn/8ZnZu">WSKH0929</a></p><p>感谢 Hexo 和 Fluid 主题的作者们，让我有机会快速搭建一个博客网站。</p><style>  /* 设置整个页面的字体 */  html, body, .markdown-body {    /* font-family: KaiTi,"Microsoft YaHei",Georgia, sans, serif; */    font-size: 16px;  }/_ 只设置 markdown 字体 _/.markdown-body {font-family: KaiTi,"Microsoft YaHei",Georgia, sans, serif;font-size: 18px;}</style>]]></content>
     
     
     <categories>
