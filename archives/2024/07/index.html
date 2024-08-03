@@ -64,7 +64,6 @@
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3846514_kabxni94auf.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/scroll.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/gradient.css">
 <link rel="stylesheet" href="/css/twikoo.css">
 
@@ -312,7 +311,7 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
+  <p class="h4">共计 2 篇文章</p>
   <hr>
   
   
@@ -426,79 +425,6 @@
   })();
 </script>
 
-<!-- twikoo设置 -->
- <!-- 其他内容 -->
-
-<!-- <script>
-//  var url = `https://api.oioweb.cn/api/qq/info?qq={$qq_number}`;
-document.addEventListener('DOMContentLoaded', function() {
-  // 获取 QQ 头像的 API
-  function getQQAvatar(qqNumber) {
-    return `https://api.oioweb.cn/api/qq/info?qq=${qqNumber}&s=100`; // QQ 头像URL
-  }
-
-  // 获取 QQ 邮箱的 API（假设存在此 API）
-  function getQQEmail(qqNumber) {
-    var url = `https://api.example.com/getEmail?qq=${qqNumber}`; // 替换为实际API地址
-    return fetch(url)
-      .then(response => response.json())
-      .then(data => data.email || '')
-      .catch(error => {
-        console.error('Error fetching email:', error);
-        return '';
-      });
-  }
-
-  // 当 QQ 号输入框内容发生变化时
-  document.getElementById('qqNumber').addEventListener('input', async function() {
-    var qqNumber = this.value;
-    if (qqNumber) {
-      // 自动获取头像
-      document.getElementById('avatar').src = getQQAvatar(qqNumber);
-      
-      // 自动获取邮箱
-      var email = await getQQEmail(qqNumber);
-      document.getElementById('email').value = email;
-      
-      // 将昵称设置为 QQ 号
-      document.getElementById('nickname').value = qqNumber;
-    }
-  });
-
-  // 拦截表单提交事件
-  document.getElementById('commentForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var qqNumber = document.getElementById('qqNumber').value;
-    var nickname = qqNumber; // 使用 QQ 号作为昵称
-    var email = document.getElementById('email').value;
-    var avatar = document.getElementById('avatar').src;
-    var content = document.getElementById('commentContent').value;
-
-    var commentData = {
-      nickname: nickname,
-      email: email,
-      avatar: avatar,
-      content: content
-    };
-
-    // 提交评论数据到 Twikoo
-    fetch('https://twikoo-api.wuyilin18.top', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(commentData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Comment submitted successfully:', data);
-        // 处理评论提交成功后的逻辑
-      })
-      .catch(error => {
-        console.error('Error submitting comment:', error);
-      });
-  });
-});
-
-</script> -->
 
   </footer>
 

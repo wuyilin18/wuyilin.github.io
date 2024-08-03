@@ -64,7 +64,6 @@
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3846514_kabxni94auf.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/scroll.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/gradient.css">
 <link rel="stylesheet" href="/css/twikoo.css">
 
@@ -316,6 +315,73 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/08/04/hexo&#39;s_bug/" target="_self">
+          <img src="https://cdn.wuyilin18.top/img/DM_20230829151426_001.jpg" srcset="/img/loading.gif" lazyload alt="解决hexo init报错&#39;&#34;node&#34;&#39; is not recognized as an internal or external command,operable program or batch file.问题">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/04/hexo&#39;s_bug/" target="_self">
+          解决hexo init报错&#39;&#34;node&#34;&#39; is not recognized as an internal or external command,operable program or batch file.问题
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/08/04/hexo&#39;s_bug/" target="_self">
+        <div>
+          记录使用Hexo搭建个人博客遇到的一些问题。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-04 00:45" pubdate>
+              2024-08-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%90%91/" class="category-chain-item">技术向</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/hexo/">#hexo</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2024/07/31/introduce/" target="_self">
           <img src="https://cdn.wuyilin18.top/img/202408011440281.jpg" srcset="/img/loading.gif" lazyload alt="介绍">
         </a>
@@ -478,79 +544,6 @@
   })();
 </script>
 
-<!-- twikoo设置 -->
- <!-- 其他内容 -->
-
-<!-- <script>
-//  var url = `https://api.oioweb.cn/api/qq/info?qq={$qq_number}`;
-document.addEventListener('DOMContentLoaded', function() {
-  // 获取 QQ 头像的 API
-  function getQQAvatar(qqNumber) {
-    return `https://api.oioweb.cn/api/qq/info?qq=${qqNumber}&s=100`; // QQ 头像URL
-  }
-
-  // 获取 QQ 邮箱的 API（假设存在此 API）
-  function getQQEmail(qqNumber) {
-    var url = `https://api.example.com/getEmail?qq=${qqNumber}`; // 替换为实际API地址
-    return fetch(url)
-      .then(response => response.json())
-      .then(data => data.email || '')
-      .catch(error => {
-        console.error('Error fetching email:', error);
-        return '';
-      });
-  }
-
-  // 当 QQ 号输入框内容发生变化时
-  document.getElementById('qqNumber').addEventListener('input', async function() {
-    var qqNumber = this.value;
-    if (qqNumber) {
-      // 自动获取头像
-      document.getElementById('avatar').src = getQQAvatar(qqNumber);
-      
-      // 自动获取邮箱
-      var email = await getQQEmail(qqNumber);
-      document.getElementById('email').value = email;
-      
-      // 将昵称设置为 QQ 号
-      document.getElementById('nickname').value = qqNumber;
-    }
-  });
-
-  // 拦截表单提交事件
-  document.getElementById('commentForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var qqNumber = document.getElementById('qqNumber').value;
-    var nickname = qqNumber; // 使用 QQ 号作为昵称
-    var email = document.getElementById('email').value;
-    var avatar = document.getElementById('avatar').src;
-    var content = document.getElementById('commentContent').value;
-
-    var commentData = {
-      nickname: nickname,
-      email: email,
-      avatar: avatar,
-      content: content
-    };
-
-    // 提交评论数据到 Twikoo
-    fetch('https://twikoo-api.wuyilin18.top', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(commentData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Comment submitted successfully:', data);
-        // 处理评论提交成功后的逻辑
-      })
-      .catch(error => {
-        console.error('Error submitting comment:', error);
-      });
-  });
-});
-
-</script> -->
 
   </footer>
 

@@ -64,7 +64,6 @@
   
 <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3846514_kabxni94auf.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/scroll.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/gradient.css">
 <link rel="stylesheet" href="/css/twikoo.css">
 
@@ -323,6 +322,48 @@
     
     <div class="category row nomargin-x">
       <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="技术向"
+        id="heading-1c13c2096497dc33e84e90aaeb06f9c9" role="tab" data-toggle="collapse" href="#collapse-1c13c2096497dc33e84e90aaeb06f9c9"
+        aria-expanded="false"
+      >
+        技术向
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E5%90%91/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-1c13c2096497dc33e84e90aaeb06f9c9"
+           role="tabpanel" aria-labelledby="heading-1c13c2096497dc33e84e90aaeb06f9c9">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/08/04/hexo&#39;s_bug/" title="解决hexo init报错&#39;&#34;node&#34;&#39; is not recognized as an internal or external command,operable program or batch file.问题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">解决hexo init报错&#39;&#34;node&#34;&#39; is not recognized as an internal or external command,operable program or batch file.问题</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="文章"
         id="heading-c75625dccf148721245b46b1e3e6c79f" role="tab" data-toggle="collapse" href="#collapse-c75625dccf148721245b46b1e3e6c79f"
         aria-expanded="false"
@@ -458,79 +499,6 @@
   })();
 </script>
 
-<!-- twikoo设置 -->
- <!-- 其他内容 -->
-
-<!-- <script>
-//  var url = `https://api.oioweb.cn/api/qq/info?qq={$qq_number}`;
-document.addEventListener('DOMContentLoaded', function() {
-  // 获取 QQ 头像的 API
-  function getQQAvatar(qqNumber) {
-    return `https://api.oioweb.cn/api/qq/info?qq=${qqNumber}&s=100`; // QQ 头像URL
-  }
-
-  // 获取 QQ 邮箱的 API（假设存在此 API）
-  function getQQEmail(qqNumber) {
-    var url = `https://api.example.com/getEmail?qq=${qqNumber}`; // 替换为实际API地址
-    return fetch(url)
-      .then(response => response.json())
-      .then(data => data.email || '')
-      .catch(error => {
-        console.error('Error fetching email:', error);
-        return '';
-      });
-  }
-
-  // 当 QQ 号输入框内容发生变化时
-  document.getElementById('qqNumber').addEventListener('input', async function() {
-    var qqNumber = this.value;
-    if (qqNumber) {
-      // 自动获取头像
-      document.getElementById('avatar').src = getQQAvatar(qqNumber);
-      
-      // 自动获取邮箱
-      var email = await getQQEmail(qqNumber);
-      document.getElementById('email').value = email;
-      
-      // 将昵称设置为 QQ 号
-      document.getElementById('nickname').value = qqNumber;
-    }
-  });
-
-  // 拦截表单提交事件
-  document.getElementById('commentForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var qqNumber = document.getElementById('qqNumber').value;
-    var nickname = qqNumber; // 使用 QQ 号作为昵称
-    var email = document.getElementById('email').value;
-    var avatar = document.getElementById('avatar').src;
-    var content = document.getElementById('commentContent').value;
-
-    var commentData = {
-      nickname: nickname,
-      email: email,
-      avatar: avatar,
-      content: content
-    };
-
-    // 提交评论数据到 Twikoo
-    fetch('https://twikoo-api.wuyilin18.top', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(commentData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Comment submitted successfully:', data);
-        // 处理评论提交成功后的逻辑
-      })
-      .catch(error => {
-        console.error('Error submitting comment:', error);
-      });
-  });
-});
-
-</script> -->
 
   </footer>
 

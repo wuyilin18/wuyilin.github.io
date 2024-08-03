@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>解决hexo init报错&#39;&quot;node&quot;&#39; is not recognized as an internal or external command,operable program or batch file.问题</title>
+    <link href="/2024/08/04/hexo&#39;s_bug/"/>
+    <url>/2024/08/04/hexo&#39;s_bug/</url>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="在博客项目文档-git-bash-初始化-hexo-报错"><a href="#在博客项目文档-git-bash-初始化-hexo-报错" class="headerlink" title="在博客项目文档 git bash 初始化 hexo 报错"></a>在博客项目文档 git bash 初始化 hexo 报错</h3><p>输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init<br></code></pre></td></tr></table></figure><p>显示</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-string">&#x27;&quot;node&quot;&#x27;</span> is not recognized as an internal or external <span class="hljs-built_in">command</span>,operable program or batch file.<br></code></pre></td></tr></table></figure><p>我出现的问题很奇葩，可以用 node 创建 vue 项目，但在初始化 hexo 就识别不出 node。</p><p><code>node -v</code> 正常显示版本号，且通过 node 版本降级和升级和 node 环境重新配置和重启系统方法都无法解决此问题</p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p><strong>注意：以下是我对于该问题的解决方法，不一定适用于所有 hexo 初始化失败情况。</strong></p><p>最后我发现是 git 缺少 node 的环境变量，通过在 git bash 输入<code>export PATH=&quot;/c/ProgramFiles/nodejs:$PATH</code>就能正常识别 node，但这个只是临时设置，新打开 git bash 窗口初始化 hexo 还是识别不了 node。</p><p>要彻底解决 Git Bash 中<code>node</code>命令无法识别的问题，你需要确保 Node.js 的安装路径正确地添加到 Git Bash 的环境变量中，并且这个设置在每次打开 Git Bash 时都有效。下面是详细步骤:</p><h3 id="1-确认-Node-js-的安装路径"><a href="#1-确认-Node-js-的安装路径" class="headerlink" title="1.确认 Node.js 的安装路径"></a>1.确认 Node.js 的安装路径</h3><p>确保你知道 Node.js 的实际安装路径。通常，Windows 上的默认安装路径是<code>c:\Program Files\nodejs</code>。在 Git Bash 中，这个路径会被映射为<code>/c/Program Files/nodejs</code>。</p><h3 id="2-永久添加到环境变量"><a href="#2-永久添加到环境变量" class="headerlink" title="2.永久添加到环境变量"></a>2.永久添加到环境变量</h3><p>可以通过修改 Git Bash 的配置文件<code>~/.bashrc</code>来永久添加 Node.js 的安装路径。这样每次打开 Git Bash 时都会自动加载这个路径。</p><h4 id="修改-bashrc文件"><a href="#修改-bashrc文件" class="headerlink" title="修改~/.bashrc文件"></a>修改<code>~/.bashrc</code>文件</h4><h6 id="1-打开-Git-Bash"><a href="#1-打开-Git-Bash" class="headerlink" title="1.打开 Git Bash."></a>1.打开 Git Bash.</h6><h6 id="2-编辑-bashrc文件"><a href="#2-编辑-bashrc文件" class="headerlink" title="2.编辑~/.bashrc文件:"></a>2.编辑<code>~/.bashrc</code>文件:</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nano ~/.bashrc<br></code></pre></td></tr></table></figure><p>如果没有<code>~/.bashrc</code>文件，你可以创建一个。</p><h6 id="3-在文件末尾添加以下行（将路径替换为你的-Node-is-安装路径）："><a href="#3-在文件末尾添加以下行（将路径替换为你的-Node-is-安装路径）：" class="headerlink" title="3.在文件末尾添加以下行（将路径替换为你的 Node.is 安装路径）："></a>3.在文件末尾添加以下行（将路径替换为你的 Node.is 安装路径）：</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;/c/Program Files/nodejs:<span class="hljs-variable">$PATH</span>&#x27;</span><br></code></pre></td></tr></table></figure><p>这样做会将 Node.is 的安装路径添加到 PATH 环境变量中，以便 Git Bash 可以找到 node 命令。</p><h6 id="4-保存并关闭编辑器："><a href="#4-保存并关闭编辑器：" class="headerlink" title="4.保存并关闭编辑器："></a>4.保存并关闭编辑器：</h6><p>在<code>nano</code>编辑器中，按<code>ctrl+x</code>，然后按<code>Y</code>保存更改，再按<code>Enter</code>退出。</p><h6 id="5-使更改生效"><a href="#5-使更改生效" class="headerlink" title="5.使更改生效:"></a>5.使更改生效:</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> ~/.bashrc<br></code></pre></td></tr></table></figure><p>这会立即应用你所做的更改，而不必重启 Git Bash。</p><p>最后再输入 hexo init 就能正常识别 node 了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术向</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>介绍</title>
     <link href="/2024/07/31/introduce/"/>
     <url>/2024/07/31/introduce/</url>
