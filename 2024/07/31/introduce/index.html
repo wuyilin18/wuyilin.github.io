@@ -83,7 +83,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"9MyCD6Vje1KMnjRLu8KdLQx3-MdYXbMMI","app_key":"7DLqgzpsaNaKLQez6WV4QsXw","server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"9MyCD6Vje1KMnjRLu8KdLQx3-MdYXbMMI","app_key":"7DLqgzpsaNaKLQez6WV4QsXw","server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -109,6 +109,7 @@
 
 
   
+
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 
@@ -427,7 +428,7 @@ font-size: 18px;
   
 </div>
 
-                <!-- 
+              
   
 
   <div class="license-box my-3">
@@ -470,8 +471,8 @@ font-size: 18px;
     <div class="license-icon iconfont"></div>
   </div>
 
- -->
-              
+
+              <!--  -->
 
               
                 <div class="post-prevnext my-3">
@@ -646,11 +647,6 @@ font-size: 18px;
   
 </div>
 
-<div style="font-size: 0.85rem">
-  <span id="timeDate">载入天数...</span>
-  <span id="times">载入时分秒...</span>
-  <script src="/js/duration.js"></script>
-</div>
 
 <!-- 其他内容 -->
 
@@ -667,6 +663,67 @@ font-size: 18px;
     };
     document.head.appendChild(script);
   })();
+</script>
+
+<!-- twikoo设置 -->
+ <!-- 其他内容 -->
+
+<script>
+  // JavaScript 代码
+document.addEventListener('DOMContentLoaded', function() {
+  function getQQUserInfo(qqNumber) {
+    // 使用 QQ 开放 API 获取用户信息
+    // 替换下面的 URL 为实际可用的 API 地址
+    var url = `https://api.qq.com/getUserInfo?qq=${qqNumber}`;
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        // 更新昵称和头像
+        document.getElementById('nickname').value = data.nickname || qqNumber;
+        document.getElementById('avatar').src = data.avatar || 'default_avatar_url';
+      })
+      .catch(error => {
+        console.error('Error fetching user info:', error);
+      });
+  }
+
+  document.getElementById('qqNumber').addEventListener('input', function() {
+    var qqNumber = this.value;
+    if (qqNumber) {
+      getQQUserInfo(qqNumber);
+    }
+  });
+
+  document.getElementById('commentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var qqNumber = document.getElementById('qqNumber').value;
+    var nickname = qqNumber; // 使用 QQ 号码作为昵称
+    var avatar = document.getElementById('avatar').src; // 使用 QQ 头像
+
+    var commentData = {
+      nickname: nickname,
+      avatar: avatar,
+      // 其他评论数据
+      content: document.getElementById('commentContent').value
+    };
+
+    // 替换为你的 Twikoo API 端点
+    fetch('/your-twikoo-api-endpoint', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(commentData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Comment submitted successfully:', data);
+        // 处理评论提交成功后的逻辑
+      })
+      .catch(error => {
+        console.error('Error submitting comment:', error);
+      });
+  });
+});
+
 </script>
 
   </footer>
@@ -834,5 +891,5 @@ font-size: 18px;
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</body>
 </html>
