@@ -68,6 +68,7 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/scroll.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/gradient.css">
+<link rel="stylesheet" href="/css/twikoo.css">
 
 
 
@@ -102,6 +103,7 @@
   
 
 <meta name="generator" content="Hexo 7.3.0"></head>
+
 
 
 <body>
@@ -414,47 +416,60 @@
 <!-- twikoo设置 -->
  <!-- 其他内容 -->
 
-<script>
-  // JavaScript 代码
+<!-- <script>
+//  var url = `https://api.oioweb.cn/api/qq/info?qq={$qq_number}`;
 document.addEventListener('DOMContentLoaded', function() {
-  function getQQUserInfo(qqNumber) {
-    // 使用 QQ 开放 API 获取用户信息
-    // 替换下面的 URL 为实际可用的 API 地址
-    var url = `https://api.qq.com/getUserInfo?qq=${qqNumber}`;
-    fetch(url)
+  // 获取 QQ 头像的 API
+  function getQQAvatar(qqNumber) {
+    return `https://api.oioweb.cn/api/qq/info?qq=${qqNumber}&s=100`; // QQ 头像URL
+  }
+
+  // 获取 QQ 邮箱的 API（假设存在此 API）
+  function getQQEmail(qqNumber) {
+    var url = `https://api.example.com/getEmail?qq=${qqNumber}`; // 替换为实际API地址
+    return fetch(url)
       .then(response => response.json())
-      .then(data => {
-        // 更新昵称和头像
-        document.getElementById('nickname').value = data.nickname || qqNumber;
-        document.getElementById('avatar').src = data.avatar || 'default_avatar_url';
-      })
+      .then(data => data.email || '')
       .catch(error => {
-        console.error('Error fetching user info:', error);
+        console.error('Error fetching email:', error);
+        return '';
       });
   }
 
-  document.getElementById('qqNumber').addEventListener('input', function() {
+  // 当 QQ 号输入框内容发生变化时
+  document.getElementById('qqNumber').addEventListener('input', async function() {
     var qqNumber = this.value;
     if (qqNumber) {
-      getQQUserInfo(qqNumber);
+      // 自动获取头像
+      document.getElementById('avatar').src = getQQAvatar(qqNumber);
+      
+      // 自动获取邮箱
+      var email = await getQQEmail(qqNumber);
+      document.getElementById('email').value = email;
+      
+      // 将昵称设置为 QQ 号
+      document.getElementById('nickname').value = qqNumber;
     }
   });
 
+  // 拦截表单提交事件
   document.getElementById('commentForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var qqNumber = document.getElementById('qqNumber').value;
-    var nickname = qqNumber; // 使用 QQ 号码作为昵称
-    var avatar = document.getElementById('avatar').src; // 使用 QQ 头像
+    var nickname = qqNumber; // 使用 QQ 号作为昵称
+    var email = document.getElementById('email').value;
+    var avatar = document.getElementById('avatar').src;
+    var content = document.getElementById('commentContent').value;
 
     var commentData = {
       nickname: nickname,
+      email: email,
       avatar: avatar,
-      // 其他评论数据
-      content: document.getElementById('commentContent').value
+      content: content
     };
 
-    // 替换为你的 Twikoo API 端点
-    fetch('/your-twikoo-api-endpoint', {
+    // 提交评论数据到 Twikoo
+    fetch('https://twikoo-api.wuyilin18.top', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(commentData)
@@ -470,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-</script>
+</script> -->
 
   </footer>
 
