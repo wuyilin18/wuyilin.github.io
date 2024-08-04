@@ -514,7 +514,7 @@
   
   
     <article id="comments" lazyload>
-      <!-- 
+      
   <div id="twikoo"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#comments', function() {
@@ -523,32 +523,8 @@
           {"envId":"https://twikoo-api.wuyilin18.top","region":"ap-shanghai","path":"./js/twikoo.all.min.js","visitor":true,"recordIP":true,"copyright":{"enable":true,"license":"BY","author":{"enable":true},"post_date":{"enable":true,"format":"LL"},"update_date":{"enable":true,"format":"LL"}}},
           {
             el: '#twikoo',
-            path: './js/twikoo.all.min.js',
-            onCommentLoaded: function() {
-              Fluid.utils.listenDOMLoaded(function() {
-                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
-                Fluid.plugins.imageCaption(imgSelector);
-                Fluid.plugins.fancyBox(imgSelector);
-              });
-            }
-          }
-        )
-        twikoo.init(options)
-      });
-    });
-  </script>
-  <noscript>Please enable JavaScript to view the comments</noscript>
- -->
-
-  <div id="twikoo"></div>
-  <script type="text/javascript">
-    Fluid.utils.loadComments('#comments', function() {
-      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
-        var options = Object.assign(
-          {"envId":"https://twikoo-api.wuyilin18.top","region":"ap-shanghai","path":"./js/twikoo.all.min.js","visitor":true,"recordIP":true,"copyright":{"enable":true,"license":"BY","author":{"enable":true},"post_date":{"enable":true,"format":"LL"},"update_date":{"enable":true,"format":"LL"}}},
-          {
-            el: '#twikoo',
-            // 使用文章的ID作为path
+            // path: './js/twikoo.all.min.js',
+  // 使用文章的ID作为path
             path: 'unique-article-id-02',
             onCommentLoaded: function() {
               Fluid.utils.listenDOMLoaded(function() {
@@ -698,7 +674,7 @@
 
 <!-- 其他内容 -->
 
-<script>
+<!-- <script>
   (function() {
     var appId = '9MyCD6Vje1KMnjRLu8KdLQx3-MdYXbMMI'; // 替换为你的 LeanCloud 应用 ID
     var appKey = '7DLqgzpsaNaKLQez6WV4QsXw'; // 替换为你的 LeanCloud 应用 Key
@@ -711,7 +687,7 @@
     };
     document.head.appendChild(script);
   })();
-</script>
+</script> -->
 
 
   </footer>
