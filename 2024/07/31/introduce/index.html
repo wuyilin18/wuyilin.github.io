@@ -432,6 +432,11 @@ font-size: 18px;
         </div>
       
       
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年8月4日</div>
+        </div>
+      
       
         <div class="license-meta-item">
           <div>许可协议</div>
@@ -452,9 +457,49 @@ font-size: 18px;
     </div>
     <div class="license-icon iconfont"></div>
   </div>
+  <style>
+  .license-box {
+      background: linear-gradient(45deg, #f6d8f5, #c2f1f0, #f0debf);
+      background: -webkit-linear-gradient(45deg, #f6d8f5, #c2f1f0, #f0debf);
+      -webkit-box-shadow: 2px 2px 5px;
+      box-shadow: 2px 2px 5px;
+      border-radius: 12px !important;
+      -webkit-animation: flashlight 1s linear infinite alternate;
+      -moz-animation: flashlight 1s linear infinite alternate;
+      -o-animation: flashlight 1s linear infinite alternate;
+      -ms-animation: flashlight 1s linear infinite alternate;
+      animation: flashlight 1s linear infinite alternate;
+    }
+  .license-box:hover {
+      -webkit-transition: box-shadow .3s ease-in-out;
+      -moz-transition: box-shadow .3s ease-in-out;
+      -o-transition: box-shadow .3s ease-in-out;
+      -ms-transition: box-shadow .3s ease-in-out;
+      transition: box-shadow .3s ease-in-out;
+      background-color: #0c0d10;
+    }
 
+    [data-user-color-scheme="dark"] .license-box {
+      border-radius: 12px !important;
+      background: #0c0d10;
+      text-shadow: #bfbeb8 0 0 2px;
+      border: 1px solid #131201;
+      -webkit-box-shadow: 0 0 5px rgb(57, 136, 197) !important;;
+      box-shadow: 0 0 5px rgb(57, 136, 197) !important;;
+      -webkit-animation: flashlight 1s linear infinite alternate;
+      -moz-animation: flashlight 1s linear infinite alternate;
+      -o-animation: flashlight 1s linear infinite alternate;
+      -ms-animation: flashlight 1s linear infinite alternate;
+      animation: flashlight 1s linear infinite alternate;
+    }
 
-              <!--  -->
+    .license-title{
+      font-size: 1.2rem;
+      /* font-weight: bold; */
+      margin-bottom: 0.6rem;
+    }
+  </style>
+
 
               
                 <div class="post-prevnext my-3">
@@ -486,7 +531,7 @@ font-size: 18px;
     Fluid.utils.loadComments('#comments', function() {
       Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
         var options = Object.assign(
-          {"envId":"https://twikoo-api.wuyilin18.top","region":"ap-shanghai","path":"./js/twikoo.all.min.js","visitor":true,"recordIP":true,"copyright":{"enable":true,"license":"BY","author":{"enable":true},"post_date":{"enable":true,"format":"LL a"},"update_date":{"enable":true,"format":"LL a"}}},
+          {"envId":"https://twikoo-api.wuyilin18.top","region":"ap-shanghai","path":"./js/twikoo.all.min.js","visitor":true,"recordIP":true},
           {
             el: '#twikoo',
             // path: './js/twikoo.all.min.js',

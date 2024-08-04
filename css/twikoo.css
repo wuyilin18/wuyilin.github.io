@@ -1,37 +1,51 @@
 #twikoo {
-    --twikoo-bordar-radius: 8px;
-    --twikoo-broder: 1px solid var(--twikoo-border-color);
+  --twikoo-bordar-radius: 8px;
+  --twikoo-broder: 1px solid var(--twikoo-border-color);
 }
 
 [data-user-color-scheme="light"] .twikoo {
-    --twikoo-card-bg-color: rgba(0, 0, 0, 0.02);
-    --twikoo-border-color: rgba(0, 0, 0, 0.05);
+  --twikoo-card-bg-color: rgba(0, 0, 0, 0.02);
+  --twikoo-border-color: rgba(0, 0, 0, 0.05);
 }
 
 [data-user-color-scheme="dark"] .twikoo {
-    --twikoo-card-bg-color: rgba(62,75,94,0.35);
-    --twikoo-border-color: rgba(255,255,255,0.05);
+  --twikoo-card-bg-color: rgba(62, 75, 94, 0.35);
+  --twikoo-border-color: rgba(255, 255, 255, 0.05);
 }
 
-
 .twikoo .tk-master {
-    background-color: var(--twikoo-card-bg-color);
-    border-radius: var(--twikoo-bordar-radius);
-    padding: 1em;
+  background-color: var(--twikoo-card-bg-color);
+  border-radius: var(--twikoo-bordar-radius);
+  padding: 1em;
 }
 
 .twikoo .tk-master .tk-extra {
-    padding: 0.5em;
-    border: var(--twikoo-broder);
-    border-radius: var(--twikoo-bordar-radius);
+  padding: 0.5em;
+  border: var(--twikoo-broder);
+  border-radius: var(--twikoo-bordar-radius);
 }
 
 .twikoo .tk-expand {
-    margin-top: 0.5em;
-    border: var(--twikoo-broder);
-    border-radius: var(--twikoo-bordar-radius);
+  margin-top: 0.5em;
+  border: var(--twikoo-broder);
+  border-radius: var(--twikoo-bordar-radius);
 }
 
 .twikoo .tk-expand:hover {
-    background-color: var(--twikoo-card-bg-color);
+  background-color: var(--twikoo-card-bg-color);
+}
+
+#twikoo .el-textarea textarea {
+  min-height: 120px !important;
+  background-size: 90px;
+}
+.el-textarea__inner {
+  background-image: url(https://www.fomal.cc/assets/open.webp) !important;
+}
+.el-textarea__inner:focus {
+  background-image: url(https://www.fomal.cc/assets/close.webp) !important;
+}
+.tk-input .el-textarea__inner {
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
