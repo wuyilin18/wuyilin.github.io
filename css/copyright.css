@@ -1,0 +1,33 @@
+.license-box {
+  background: linear-gradient(45deg, #f6d8f5, #c2f1f0, #f0debf);
+  background: -webkit-linear-gradient(45deg, #f6d8f5, #c2f1f0, #f0debf);
+  -webkit-box-shadow: 2px 2px 5px;
+  box-shadow: 2px 2px 5px;
+  border-radius: 12px !important;
+}
+.license-box:hover {
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  -ms-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  box-shadow: none;
+}
+
+[data-user-color-scheme="dark"] .license-box {
+  border-radius: 12px !important;
+  background: #0c0d10;
+  text-shadow: #bfbeb8 0 0 1px;
+  border: 1px solid #131201;
+  -webkit-box-shadow: 0 0 5px rgb(57, 136, 197) !important;
+  box-shadow: 0 0 5px rgb(57, 136, 197) !important;
+}
+
+.license-title {
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+  margin-bottom: 0.6rem;
+}
+.license-meta-item {
+  color: #007bff;
+}
